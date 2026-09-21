@@ -26,7 +26,7 @@ async_session=async_sessionmaker(
 # 初始化数据库
 async def init_db()->None:
     async with engine.begin() as conn:
-        await conn.run_sync((SQLModel.metadata.create_all)
+        await conn.run_sync(SQLModel.metadata.create_all)
 async def get_session() -> Generator[AsyncSession, None]:
     async with async_session() as session:
         yield  session

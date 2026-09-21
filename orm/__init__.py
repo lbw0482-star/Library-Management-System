@@ -1,4 +1,4 @@
 from .models import Book
-from .database import get_session,init_db
+from . import database
 
 __init__=["Book","get_session","init_db"]
